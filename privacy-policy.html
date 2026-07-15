@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="it">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="referrer" content="no-referrer">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; style-src 'self'; base-uri 'none'; form-action 'self' mailto:">
+    <meta name="description" content="Privacy Policy di Groowy.">
+    <title>Privacy Policy — Groowy</title>
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <header>
+      <a class="brand" href="index.html"><span class="brand-mark" aria-hidden="true"></span>Groowy</a>
+      <nav aria-label="Navigazione principale">
+        <a href="privacy-policy.html" aria-current="page">Privacy</a>
+        <a href="delete-account.html">Cancella account</a>
+        <a href="terms-of-service.html">Termini</a>
+      </nav>
+    </header>
+    <main>
+      <p class="eyebrow">Privacy Policy</p>
+      <h1>Come Groowy tratta i dati.</h1>
+      <p class="lead">Questa informativa descrive il trattamento dei dati nell'app Groowy per Android e iOS.</p>
+      <p class="meta"><strong>In vigore dal:</strong> 15 luglio 2026 · <strong>Titolare:</strong> Elia Berselli · <a href="mailto:hello@groowy.app">hello@groowy.app</a></p>
+
+      <h2>1. Il modello offline-first</h2>
+      <p>
+        Le informazioni finanziarie personali vengono salvate prima di tutto
+        nel database locale del dispositivo. Un Account locale può usare le
+        funzioni principali senza creare un profilo cloud. I dati lasciano il
+        dispositivo quando usi una funzione che lo richiede, come Account
+        cloud, Gruppi, scansione AI, parsing notifiche, backup Google Drive o
+        acquisti. Fanno eccezione i dati diagnostici essenziali: quando
+        Crashlytics è disponibile, crash report sanitizzati e un identificatore
+        pseudonimo possono essere trasmessi automaticamente.
+      </p>
+
+      <h2>2. Dati trattati e finalità</h2>
+      <table>
+        <thead><tr><th>Dati</th><th>Quando</th><th>Finalità</th></tr></thead>
+        <tbody>
+          <tr><td>Email, nome profilo e identificatore account</td><td>Quando crei o usi un Account cloud</td><td>Autenticazione, sicurezza, profilo e recupero accesso</td></tr>
+          <tr><td>Transazioni e oggetti condivisi</td><td>Solo quando usi Gruppi cloud</td><td>Collaborazione con i membri scelti</td></tr>
+          <tr><td>Immagini o testo dei documenti</td><td>Quando avvii una scansione AI dopo il consenso</td><td>Classificazione ed estrazione richiesta dall'utente</td></tr>
+          <tr><td>Testo di notifiche selezionate</td><td>Solo con funzione compatibile e toggle esplicito, disattivo per default</td><td>Creazione assistita di movimenti da notifiche</td></tr>
+          <tr><td>Metriche tecniche AI</td><td>Durante una richiesta AI</td><td>Quote, prevenzione abusi e controllo costi; non includono immagini o testo grezzo</td></tr>
+          <tr><td>Crash, stack e identificatore diagnostico pseudonimo</td><td>Quando Crashlytics è disponibile</td><td>Stabilità, diagnosi e sicurezza</td></tr>
+          <tr><td>Identificatore acquisto ed entitlement</td><td>Quando usi abbonamenti o ripristino acquisti</td><td>Attivazione del piano e prevenzione frodi</td></tr>
+          <tr><td>Backup scelto dall'utente</td><td>Quando colleghi Google Drive e avvii backup/restore</td><td>Recupero dati su richiesta</td></tr>
+        </tbody>
+      </table>
+
+      <h2>3. Basi del trattamento</h2>
+      <p>
+        Il trattamento necessario a fornire account, Gruppi, backup e acquisti
+        si basa sull'esecuzione del servizio richiesto. La scansione AI e il
+        parsing delle notifiche richiedono una scelta esplicita dell'utente.
+        Sicurezza, prevenzione abusi e diagnostica essenziale si basano sul
+        legittimo interesse a mantenere Groowy affidabile, con minimizzazione e
+        log sanitizzati. Eventuali obblighi fiscali o di legge restano separati.
+      </p>
+
+      <h2>4. Fornitori</h2>
+      <ul>
+        <li><strong>Supabase:</strong> autenticazione, profilo, Gruppi, funzioni backend e metering AI.</li>
+        <li><strong>OpenRouter e provider di modello compatibili:</strong> inferenza AI. Le richieste Groowy impongono routing Zero Data Retention; OpenRouter può conservare metadati tecnici senza contenuto.</li>
+        <li><strong>Google Firebase Crashlytics:</strong> diagnostica crash con messaggi sintetici e identificatore pseudonimo.</li>
+        <li><strong>RevenueCat e Google Play:</strong> acquisti, entitlement e ripristino abbonamenti.</li>
+        <li><strong>Google Drive:</strong> backup esplicito nella cartella creata da Groowy con accesso limitato ai file dell'app.</li>
+        <li><strong>Resend:</strong> consegna delle email transazionali per gli inviti ai Gruppi.</li>
+      </ul>
+
+      <h2>5. Conservazione</h2>
+      <ul>
+        <li>I dati locali restano sul dispositivo finché li cancelli, rimuovi l'app o il sistema li elimina.</li>
+        <li>I dati dell'Account cloud restano finché l'account è attivo o finché una base legale ne richiede la conservazione.</li>
+        <li>Alla cancellazione account, il collegamento fra UID ed eventi tecnici AI viene rimosso; metriche non più riconducibili all'account possono restare per contabilità e prevenzione abusi.</li>
+        <li>Firebase dichiara per Crashlytics una conservazione di 90 giorni prima dell'avvio della rimozione dai sistemi attivi e di backup.</li>
+        <li>I backup Drive restano nell'account Google finché l'utente non li elimina; Groowy non li cancella automaticamente con l'account cloud.</li>
+        <li>Metadati di acquisto possono essere conservati da Google e RevenueCat secondo obblighi contrattuali e legali propri.</li>
+      </ul>
+
+      <h2>6. Sicurezza e trasferimenti</h2>
+      <p>
+        Groowy usa connessioni cifrate, Row Level Security sul backend, storage
+        sicuro del dispositivo e log remoti privi del messaggio d'errore grezzo.
+        Nessun sistema è però privo di rischio. Alcuni fornitori possono trattare
+        dati fuori dallo Spazio Economico Europeo usando le garanzie previste
+        dai rispettivi accordi e dalla normativa applicabile.
+      </p>
+
+      <h2>7. Scelte e diritti</h2>
+      <p>
+        Puoi usare l'Account locale, revocare il consenso AI, disattivare il
+        parsing notifiche, esportare o cancellare i dati locali e scollegare
+        Drive. Puoi chiedere accesso, rettifica, portabilità, limitazione,
+        opposizione o cancellazione scrivendo a
+        <a href="mailto:hello@groowy.app">hello@groowy.app</a>. Potremo chiedere
+        una verifica dell'identità. Hai inoltre diritto di rivolgerti
+        all'autorità di controllo competente.
+      </p>
+
+      <h2>8. Cancellazione account</h2>
+      <p>
+        Consulta la <a href="delete-account.html">procedura dedicata</a>. La
+        cancellazione in-app rimuove anche i dati locali dell'account attivo;
+        una richiesta web non può cancellare a distanza dati rimasti su un
+        dispositivo offline.
+      </p>
+
+      <h2>9. Minori e aggiornamenti</h2>
+      <p>
+        Groowy non è progettata per bambini sotto i 13 anni e non raccoglie
+        consapevolmente i loro dati. Questa informativa può essere aggiornata
+        quando cambiano funzioni, fornitori o norme; la data in alto identifica
+        la versione corrente.
+      </p>
+
+      <details>
+        <summary>English summary</summary>
+        <p>Groowy is offline-first. Personal finance data stays on the device unless you choose a cloud feature, AI scan, notification parsing, Drive backup, Group or purchase.</p>
+        <p>Cloud providers include Supabase, OpenRouter/model providers, Firebase Crashlytics, RevenueCat, Google Play, Google Drive and Resend. AI actions require an explicit user choice and requests enforce Zero Data Retention routing. Technical metadata may still be processed.</p>
+        <p>You may request access, correction, export or deletion at <a href="mailto:hello@groowy.app">hello@groowy.app</a>. See the <a href="delete-account.html">account deletion page</a> for details.</p>
+      </details>
+    </main>
+    <footer><p>Groowy · Elia Berselli · <a href="mailto:hello@groowy.app">hello@groowy.app</a></p></footer>
+  </body>
+</html>
