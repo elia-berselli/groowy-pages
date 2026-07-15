@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="it">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="referrer" content="no-referrer">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; style-src 'self'; base-uri 'none'; form-action 'self' mailto:">
+    <meta name="description" content="Come eliminare un account Groowy e i dati associati.">
+    <title>Cancella account — Groowy</title>
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <header>
+      <a class="brand" href="index.html"><span class="brand-mark" aria-hidden="true"></span>Groowy</a>
+      <nav aria-label="Navigazione principale">
+        <a href="privacy-policy.html">Privacy</a>
+        <a href="delete-account.html" aria-current="page">Cancella account</a>
+        <a href="terms-of-service.html">Termini</a>
+      </nav>
+    </header>
+    <main>
+      <p class="eyebrow">Cancellazione account e dati</p>
+      <h1>Puoi eliminare il tuo account Groowy.</h1>
+      <p class="lead">Puoi farlo dall'app oppure inviare una richiesta web senza reinstallarla.</p>
+      <p class="meta">Ultimo aggiornamento: 15 luglio 2026 · Sviluppatore: Elia Berselli</p>
+
+      <h2>Metodo più rapido: dall'app</h2>
+      <ol class="steps">
+        <li>Apri Groowy e passa all'Account cloud da cancellare.</li>
+        <li>Apri <strong>Impostazioni → Profilo → Cancella account</strong>.</li>
+        <li>Leggi le conseguenze, scegli il motivo e conferma.</li>
+      </ol>
+      <p>
+        Questo metodo elimina l'account cloud e avvia la pulizia del database,
+        dei media e dei secret carta riferiti all'account attivo sul dispositivo.
+      </p>
+
+      <h2>Richiesta web senza app</h2>
+      <p>
+        Scrivi dall'indirizzo email associato all'Account cloud a
+        <a href="mailto:hello@groowy.app?subject=Richiesta%20cancellazione%20account%20Groowy">hello@groowy.app</a>
+        con oggetto <strong>Richiesta cancellazione account Groowy</strong>.
+        Non inviare password, PIN, documenti, immagini di carte o dati finanziari.
+      </p>
+      <a class="button" href="mailto:hello@groowy.app?subject=Richiesta%20cancellazione%20account%20Groowy">Prepara l'email</a>
+      <div class="notice">
+        <strong>Verifica necessaria</strong>
+        <p>Per impedire cancellazioni abusive potremo chiederti di confermare la richiesta dall'email dell'account o con un altro controllo proporzionato. Dopo la verifica, la cancellazione cloud viene normalmente completata entro 30 giorni; eventuali estensioni previste dalla legge saranno comunicate.</p>
+      </div>
+
+      <h2>Cosa viene eliminato</h2>
+      <p>
+        Nel flusso in-app, la cancellazione server e la pulizia locale vengono
+        eseguite durante la procedura e l'app conferma soltanto l'esito
+        ricevuto. Se una fase fallisce, il tentativo viene diagnosticato e deve
+        essere ripetuto o completato tramite assistenza.
+      </p>
+      <ul>
+        <li>credenziali e profilo dell'Account cloud;</li>
+        <li>Gruppi di cui sei proprietario e relativi dati condivisi;</li>
+        <li>la tua appartenenza ai Gruppi posseduti da altri;</li>
+        <li>associazioni Groowy a piano ed entitlement;</li>
+        <li>con il flusso in-app, dati e media locali riferiti all'account attivo sul dispositivo.</li>
+      </ul>
+
+      <h2>Cosa non viene eliminato automaticamente</h2>
+      <ul>
+        <li><strong>Backup Google Drive:</strong> restano nell'account Google finché non li elimini da Drive.</li>
+        <li><strong>Dati su dispositivi offline:</strong> una richiesta web non può cancellarli a distanza. Usa “Cancella dati”, cancella l'account dall'app oppure rimuovi i dati dell'app dal sistema.</li>
+        <li><strong>Registrazioni di acquisto:</strong> Google Play e RevenueCat possono conservarle secondo obblighi propri.</li>
+        <li><strong>Diagnostica e metriche:</strong> possono restare per il periodo tecnico dichiarato dai fornitori o in forma non più collegata al tuo UID.</li>
+        <li><strong>Dati che la legge impone di conservare:</strong> solo per il tempo e lo scopo richiesti.</li>
+      </ul>
+
+      <h2>Solo Account locale?</h2>
+      <p>
+        Un Account locale non ha un account remoto da eliminare. Puoi cancellare
+        i dati da <strong>Gestione dati</strong>, eliminare l'Account locale dalla
+        pagina Account oppure rimuovere i dati dell'app dalle impostazioni del
+        dispositivo. I backup Drive devono essere eliminati separatamente.
+      </p>
+
+      <h2>Assistenza</h2>
+      <p>Per domande sulla richiesta scrivi a <a href="mailto:hello@groowy.app">hello@groowy.app</a>.</p>
+
+      <details>
+        <summary>English instructions</summary>
+        <p>In the app, switch to the Cloud Account and open <strong>Settings → Profile → Delete account</strong>.</p>
+        <p>Without the app, email <a href="mailto:hello@groowy.app?subject=Groowy%20account%20deletion%20request">hello@groowy.app</a> from the address linked to your Cloud Account. Do not send passwords, PINs, card images or financial documents. Identity verification may be required.</p>
+        <p>The web request deletes cloud data but cannot remotely wipe data on an offline device or backups in your Google Drive.</p>
+      </details>
+    </main>
+    <footer><p>Groowy · Elia Berselli · <a href="privacy-policy.html">Privacy Policy</a></p></footer>
+  </body>
+</html>
