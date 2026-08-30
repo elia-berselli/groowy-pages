@@ -1,0 +1,9 @@
+---
+import PublicLayout from '../../layouts/PublicLayout.astro';
+
+const alternatePaths = { it: '/support/', en: '/en/support/' };
+---
+
+<PublicLayout lang="en" title="Support" description="Groowy support and contact page, ready for a public channel without inventing an unverified address." canonicalPath="/en/support/" {alternatePaths}>
+  <article class="prose"><p class="eyebrow">Support</p><h1>A simple channel for a product in development.</h1><p>For project questions, beta access, feedback or usage issues, write to <a href="mailto:hello@groowy.app?subject=Groowy%20support">hello@groowy.app</a>. The public handling process and response times will be defined before final publication.</p><h2>What you can send</h2><ul><li>your device and app version;</li><li>the step you were taking and what you observed;</li><li>ideas, beta requests or experience feedback.</li></ul><p>For APIs, providers or commercial collaborations, use the <a href="/en/partners/open-banking/">partner page</a>. Do not include card data or other sensitive information in a test request.</p><div class="notice">Groowy is in development: support is not financial, tax or banking advice.</div></article>
+</PublicLayout>

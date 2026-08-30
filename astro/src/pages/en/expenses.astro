@@ -1,0 +1,10 @@
+---
+import { getEntry } from 'astro:content';
+import GuideArticle from '../../components/GuideArticle.astro';
+
+const guide = await getEntry('guides', 'en/expenses');
+if (!guide) throw new Error('English spending guide not found');
+const alternatePaths = { it: guide.data.alternatePath, en: guide.data.canonicalPath };
+---
+
+<GuideArticle {guide} {alternatePaths} />

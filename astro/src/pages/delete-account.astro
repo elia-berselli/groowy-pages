@@ -1,0 +1,8 @@
+---
+import LegalDocument from '../components/LegalDocument.astro';
+import { getLegacyLegalDocument } from '../lib/legacy_legal';
+
+const document = getLegacyLegalDocument('deleteAccount');
+---
+
+<LegalDocument {document} />

@@ -1,0 +1,27 @@
+---
+import PublicLayout from '../layouts/PublicLayout.astro';
+
+const alternatePaths = { it: '/support/', en: '/en/support/' };
+---
+
+<PublicLayout
+  lang="it"
+  title="Supporto"
+  description="Supporto e canali di contatto di Groowy: una pagina pronta per il canale pubblico, senza indirizzi non ancora verificati."
+  canonicalPath="/support/"
+  {alternatePaths}
+>
+  <article class="prose">
+    <p class="eyebrow">Supporto</p>
+    <h1>Un canale semplice per un prodotto in sviluppo.</h1>
+    <p>Per domande sul progetto, beta, feedback o problemi di utilizzo puoi scrivere a <a href="mailto:hello@groowy.app?subject=Supporto%20Groowy">hello@groowy.app</a>. Il processo pubblico di gestione e i tempi di risposta saranno definiti prima della pubblicazione definitiva.</p>
+    <h2>Cosa puoi inviare</h2>
+    <ul>
+      <li>il dispositivo e la versione dell'app;</li>
+      <li>il passaggio che stavi eseguendo e il risultato osservato;</li>
+      <li>idee, richieste di beta o feedback sull'esperienza.</li>
+    </ul>
+    <p>Per API, provider o collaborazioni commerciali usa la <a href="/partners/open-banking/">pagina partner</a>. Non inserire dati di carte o altri dati sensibili in una richiesta di test.</p>
+    <div class="notice">Groowy è in sviluppo: il canale di supporto non sostituisce consulenza finanziaria, fiscale o bancaria.</div>
+  </article>
+</PublicLayout>

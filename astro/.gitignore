@@ -1,0 +1,7 @@
+node_modules/
+dist/
+.astro/
+public/privacy-policy.html
+public/terms-of-service.html
+public/delete-account.html
+public/reset-password.html

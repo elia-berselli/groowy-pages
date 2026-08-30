@@ -1,0 +1,9 @@
+---
+import PublicLayout from '../../layouts/PublicLayout.astro';
+
+const alternatePaths = { it: '/about/', en: '/en/about/' };
+---
+
+<PublicLayout lang="en" title="About Groowy" description="The Groowy vision: personal finance that is more readable, respectful and verifiable." canonicalPath="/en/about/" {alternatePaths}>
+  <article class="prose"><p class="eyebrow">The project</p><h1>Understand your money without adding noise.</h1><p>Groowy is an independent project by Elia Berselli: a mobile app for people who want a concrete view of their finances without turning them into another stream that is hard to read.</p><p>The first version brings transactions, budgets, goals, documents and spaces into one experience. It does not replace your bank or decide for you; it makes what you already manage easier to understand.</p><h2>A foundation that can grow with care</h2><p>Today Groowy starts with offline-first personal organisation. Tomorrow, external connections — including possible read-only AIS access — will be separate modules, evaluated with consent, revocation and minimal data.</p><div class="notice">This page describes a project vision. It does not present Groowy as a bank, AISP, financial adviser or currently available service.</div><p><a class="text-link" href="/en/security/">See the data perimeter <span aria-hidden="true">→</span></a></p></article>
+</PublicLayout>

@@ -1,0 +1,24 @@
+---
+import PublicLayout from '../layouts/PublicLayout.astro';
+
+const alternatePaths = { it: '/about/', en: '/en/about/' };
+---
+
+<PublicLayout
+  lang="it"
+  title="Chi è Groowy"
+  description="La visione di Groowy: rendere la gestione personale più leggibile, rispettosa e verificabile."
+  canonicalPath="/about/"
+  {alternatePaths}
+>
+  <article class="prose">
+    <p class="eyebrow">Il progetto</p>
+    <h1>Capire il denaro senza aggiungere rumore.</h1>
+    <p>Groowy è un progetto indipendente di Elia Berselli: un'app mobile per chi vuole ritrovare una visione concreta delle proprie finanze senza trasformarle in un altro flusso difficile da leggere.</p>
+    <p>La prima versione riunisce transazioni, budget, obiettivi, documenti e Spazi in un'unica esperienza. Non vuole sostituire la banca né decidere per te: vuole rendere più leggibile ciò che già gestisci.</p>
+    <h2>Una base che può crescere con criterio</h2>
+    <p>Oggi Groowy parte da un'organizzazione personale offline-first. Domani, eventuali collegamenti esterni — compreso un possibile accesso AIS in sola lettura — saranno moduli separati, valutati con consenso, revoca e dati minimi.</p>
+    <div class="notice">Questa pagina descrive una visione di progetto. Non presenta Groowy come banca, AISP, consulente finanziario o servizio già disponibile.</div>
+    <p><a class="text-link" href="/security/">Vedi il perimetro dei dati <span aria-hidden="true">→</span></a></p>
+  </article>
+</PublicLayout>
