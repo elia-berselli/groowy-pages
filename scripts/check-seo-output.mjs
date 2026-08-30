@@ -31,6 +31,7 @@ const legacyFallbackFiles = new Set([
   'terms-of-service.html',
   'delete-account.html',
   'reset-password.html',
+  'partners.html',
 ]);
 const collectHtmlFiles = (directory) => readdirSync(directory, { withFileTypes: true })
   .flatMap((entry) => {
@@ -111,8 +112,13 @@ if (!existsSync(distDirectory)) {
   }
   const sitemapPath = resolve(distDirectory, 'sitemap.xml');
   const sitemap = existsSync(sitemapPath) ? readFileSync(sitemapPath, 'utf8') : '';
-  for (const route of pairs.flatMap((pair) => [pair.it, pair.en])) {
-    if (!sitemap.includes(`<loc>https://groowy.app${route}</loc>`)) failures.push(`sitemap: route guida assente ${route}`);
+  const expectedSitemapRoutes = [
+    ...pairs.flatMap((pair) => [pair.it, pair.en]),
+    '/guide/',
+    '/en/guides/',
+  ];
+  for (const route of expectedSitemapRoutes) {
+    if (!sitemap.includes(`<loc>https://groowy.app${route}</loc>`)) failures.push(`sitemap: route assente ${route}`);
   }
 }
 

@@ -13,7 +13,7 @@ status: "review"
 indexing: "index"
 productStatus: "beta"
 order: 1
-claimRefs: ["PRODUCT-OFFLINE-FIRST"]
+claimRefs: ["PRODUCT-OFFLINE-FIRST-001"]
 evidenceRefs: ["lib/database/database.dart", "docs/features/duplicate_detection.md"]
 author: "Elia Berselli"
 reviewer: "Groowy editorial review"

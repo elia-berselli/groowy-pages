@@ -6,21 +6,24 @@ const scriptDirectory = dirname(fileURLToPath(import.meta.url));
 const siteRoot = resolve(scriptDirectory, '..');
 const publicDirectory = resolve(siteRoot, 'astro', 'public');
 
-// Questi file restano la fonte legale autorevole. Il nuovo build li include
+// Questi file restano la fonte legale e di fallback autorevole. Il nuovo build li include
 // senza duplicarne o riscriverne il contenuto editoriale.
-const legacyLegalFiles = [
+const legacyFiles = [
   'privacy-policy.html',
   'terms-of-service.html',
   'delete-account.html',
   'reset-password.html',
+  'styles.css',
+  'reset-password.js',
+  'partners.html',
 ];
 
 mkdirSync(publicDirectory, { recursive: true });
 
-for (const fileName of legacyLegalFiles) {
+for (const fileName of legacyFiles) {
   const sourcePath = resolve(siteRoot, fileName);
   const targetPath = resolve(publicDirectory, fileName);
   copyFileSync(sourcePath, targetPath);
 }
 
-console.log(`LEGAL_SYNC_GREEN ${legacyLegalFiles.length} file legacy copiati`);
+console.log(`LEGAL_SYNC_GREEN ${legacyFiles.length} file e asset legacy copiati`);

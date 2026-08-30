@@ -13,7 +13,7 @@ status: "review"
 indexing: "index"
 productStatus: "beta"
 order: 2
-claimRefs: ["PRODUCT-OFFLINE-FIRST"]
+claimRefs: ["PRODUCT-OFFLINE-FIRST-001"]
 evidenceRefs: ["docs/features/ocr_pipeline.md", "lib/services/card_scan_service.dart"]
 author: "Elia Berselli"
 reviewer: "Groowy editorial review"

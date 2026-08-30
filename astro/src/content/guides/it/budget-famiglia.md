@@ -13,7 +13,7 @@ status: "review"
 indexing: "index"
 productStatus: "beta"
 order: 3
-claimRefs: ["PRODUCT-OFFLINE-FIRST"]
+claimRefs: ["PRODUCT-OFFLINE-FIRST-001"]
 evidenceRefs: ["docs/features/spaces_architecture.md", "docs/features/groups_architecture.md"]
 author: "Elia Berselli"
 reviewer: "Revisione editoriale Groowy"

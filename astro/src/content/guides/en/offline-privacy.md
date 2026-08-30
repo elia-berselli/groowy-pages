@@ -13,7 +13,7 @@ status: "review"
 indexing: "index"
 productStatus: "beta"
 order: 4
-claimRefs: ["PRODUCT-OFFLINE-FIRST", "AIS-READ-ONLY-ROADMAP"]
+claimRefs: ["PRODUCT-OFFLINE-FIRST-001", "PARTNER-AIS-READONLY-001"]
 evidenceRefs: ["docs/core/DATABASE_DEEP_DIVE.md", "docs/features/ocr_pipeline.md", "docs/features/cloud_backup.md"]
 author: "Elia Berselli"
 reviewer: "Groowy editorial review"

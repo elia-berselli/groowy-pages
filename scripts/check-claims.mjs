@@ -115,7 +115,26 @@ try {
     const data = parseFrontmatter(await readFile(filePath, 'utf8'), filePath);
     assertClaim(data, filePath, seenIds);
   }
-  console.log(`CLAIMS_GREEN ${files.length} file verificati`);
+
+  // Verifica integrità referenziale delle guide verso le claims
+  const guidesDirectory = join(repositoryDirectory, 'astro', 'src', 'content', 'guides');
+  const guideFiles = await markdownFiles(guidesDirectory);
+  let checkedRefs = 0;
+  for (const filePath of guideFiles) {
+    const data = parseFrontmatter(await readFile(filePath, 'utf8'), filePath);
+    const label = relative(repositoryDirectory, filePath);
+    if (!Array.isArray(data.claimRefs) || data.claimRefs.length === 0) {
+      throw new Error(`${label}: claimRefs assente o vuoto`);
+    }
+    for (const ref of data.claimRefs) {
+      if (!seenIds.has(ref)) {
+        throw new Error(`${label}: claimRef sconosciuta o non registrata: ${ref}`);
+      }
+      checkedRefs += 1;
+    }
+  }
+
+  console.log(`CLAIMS_GREEN ${files.length} claims e ${checkedRefs} riferimenti in ${guideFiles.length} guide verificati`);
 } catch (error) {
   if (error?.code === 'ENOENT') {
     console.error('CLAIMS_RED registry_missing');

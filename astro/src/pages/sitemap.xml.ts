@@ -9,11 +9,13 @@ const staticPaths = [
   '/terms/',
   '/delete-account/',
   '/partners/open-banking/',
+  '/guide/',
   '/support/',
   '/en/',
   '/en/about/',
   '/en/security/',
   '/en/partners/open-banking/',
+  '/en/guides/',
   '/en/support/',
 ];
 
