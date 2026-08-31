@@ -1,0 +1,53 @@
+---
+import PublicLayout from '../../layouts/PublicLayout.astro';
+
+const alternatePaths = { it: '/', en: '/en/' };
+---
+
+<PublicLayout
+  lang="en"
+  title="Personal finance, with more clarity"
+  description="Groowy is the offline-first app for organising spending, documents, budgets and shared spaces with more clarity."
+  canonicalPath="/en/"
+  {alternatePaths}
+>
+  <section class="hero" aria-labelledby="hero-title">
+    <div class="hero-copy">
+      <p class="eyebrow">Personal finance, designed for real life</p>
+      <h1 id="hero-title">Your finances.<br />With more clarity.</h1>
+      <p class="hero-lead">Groowy helps you organise spending, documents, budgets and goals. Data starts on your device: you decide when to use cloud, AI or sharing features.</p>
+      <div class="hero-actions"><a class="button" href="#availability">See availability</a><a class="text-link" href="#features">How it works <span aria-hidden="true">↓</span></a></div>
+      <p class="microcopy">A personal organisation tool. Not financial or tax advice.</p>
+    </div>
+    <div class="product-visual" aria-label="Abstract representation of Groowy features">
+      <div class="phone-frame"><div class="phone-top"></div><div class="visual-label">This month</div><div class="visual-balance"></div><div class="visual-chart" aria-hidden="true"><span></span><span></span><span></span><span></span><span></span></div><div class="visual-row"><i></i><b></b><em></em></div><div class="visual-row"><i></i><b></b><em></em></div><div class="visual-row"><i></i><b></b><em></em></div></div>
+      <div class="receipt-card"><span class="receipt-dot"></span><strong>Document captured</strong><small>Ready to review and save</small></div>
+      <div class="space-card"><span>Active space</span><strong>Personal</strong></div>
+    </div>
+  </section>
+
+  <section class="trust-strip" aria-label="Groowy principles">
+    <p><strong>Organise offline too</strong><span>The personal base stays useful on your device.</span></p>
+    <p><strong>Activate what you need</strong><span>Cloud, AI and sharing follow an explicit choice.</span></p>
+    <p><strong>Read before deciding</strong><span>Spending, budgets and goals in one clear view.</span></p>
+  </section>
+
+  <section id="features" class="section" aria-labelledby="features-title">
+    <div class="section-intro"><p class="eyebrow">Everything useful, without the noise</p><h2 id="features-title">A place to understand, not just record.</h2><p>Groowy does not decide for you. It brings together the information you already manage and makes it readable, verifiable and yours.</p></div>
+    <div class="feature-grid"><article class="feature-card"><span class="feature-number">01</span><h3>Spending and categories</h3><p>Record income and expenses, then use categories, tags and recurring movements to find what matters.</p></article><article class="feature-card"><span class="feature-number">02</span><h3>Budgets and goals</h3><p>Follow budgets, savings and accounts with a consistent view of your active space.</p></article><article class="feature-card"><span class="feature-number">03</span><h3>Documents and references</h3><p>Capture documents and keep useful references in order. AI features are assistive and voluntary; results remain yours to check.</p></article><article class="feature-card"><span class="feature-number">04</span><h3>Spaces and groups</h3><p>Keep Personal, Family or Work separate; when you share, you know with whom and in which space.</p></article></div>
+    <p class="section-link"><a class="text-link" href="/en/guides/">Read the practical guides on spending, documents, budgets and privacy <span aria-hidden="true">→</span></a></p>
+  </section>
+
+  <section id="control" class="section split-section" aria-labelledby="control-title">
+    <div><p class="eyebrow">A readable path</p><h2 id="control-title">Organise first. Then choose what to connect.</h2><p>The app stays useful without a cloud account: record, search and understand your data on the device. When you activate an external feature, Groowy shows its purpose and scope before you proceed.</p><a class="text-link" href="/en/security/">Read how data is handled <span aria-hidden="true">→</span></a></div>
+    <div class="principle-list"><div><span>01</span><p><strong>Start on the device</strong>The personal record does not require a bank connection to work.</p></div><div><span>02</span><p><strong>Activate by use case</strong>Cloud, backup, AI or shared spaces enter only when they are useful.</p></div><div><span>03</span><p><strong>Check the result</strong>Scans and future automated readings remain assistive: you confirm them.</p></div></div>
+  </section>
+
+  <section id="availability" class="section availability" aria-labelledby="availability-title">
+    <div class="section-intro"><p class="eyebrow">Availability</p><h2 id="availability-title">Groowy is coming to the stores.</h2><p>We are completing the release candidate. When versions are public, this page will contain direct, verified store links.</p></div>
+    <div class="store-grid"><article class="store-card"><span class="store-kicker">Android</span><h3>Google Play</h3><p>Preparing for publication.</p><span class="status-badge">Coming soon</span></article><article class="store-card"><span class="store-kicker">iPhone and iPad</span><h3>App Store</h3><p>Preparing for publication.</p><span class="status-badge">Coming soon</span></article></div>
+    <div class="availability-note"><p><strong>Want to follow the project or try a beta when available?</strong> Write to <a href="mailto:hello@groowy.app?subject=Groowy%20beta">hello@groowy.app</a>.</p></div>
+  </section>
+
+  <section class="partner-banner" aria-labelledby="partner-title"><div><p class="eyebrow">For potential partners</p><h2 id="partner-title">We are building a serious product for sensitive financial data.</h2></div><div><p>Groowy is looking for future read-only banking API conversations with explicit consent and a verifiable data perimeter.</p><a class="button secondary" href="/en/partners/open-banking/">Explore partner context</a></div></section>
+</PublicLayout>

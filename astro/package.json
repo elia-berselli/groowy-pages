@@ -1,0 +1,25 @@
+{
+  "name": "groowy-public-site-astro",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "predev": "npm run sync:legal",
+    "dev": "astro dev",
+    "test:claims": "node ../scripts/check-claims.mjs",
+    "sync:legal": "node ../scripts/sync-legacy-legal.mjs",
+    "test:legal": "npm run sync:legal && node ../scripts/check-legacy-legal.mjs",
+    "test:legal-render": "npm run build && node ../scripts/check-legal-render.mjs",
+    "test:links": "npm run build && node ../scripts/check-site-links.mjs",
+    "test:seo": "node ../scripts/check-seo-guides.mjs",
+    "test:seo-output": "npm run build && node ../scripts/check-seo-output.mjs",
+    "check": "astro check",
+    "build": "npm run sync:legal && astro build"
+  },
+  "dependencies": {
+    "astro": "7.2.2"
+  },
+  "devDependencies": {
+    "@astrojs/check": "0.9.10",
+    "typescript": "^5.9.3"
+  }
+}

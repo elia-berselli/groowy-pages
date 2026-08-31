@@ -1,0 +1,92 @@
+---
+import PublicLayout from '../layouts/PublicLayout.astro';
+
+const alternatePaths = { it: '/', en: '/en/' };
+---
+
+<PublicLayout
+  lang="it"
+  title="Le tue finanze, con più chiarezza"
+  description="Groowy è l'app offline-first per organizzare spese, documenti, budget e spazi condivisi con più chiarezza."
+  canonicalPath="/"
+  {alternatePaths}
+>
+  <section class="hero" aria-labelledby="hero-title">
+    <div class="hero-copy">
+      <p class="eyebrow">Finanza personale, progettata per la vita vera</p>
+      <h1 id="hero-title">Le tue finanze.<br />Con più chiarezza.</h1>
+      <p class="hero-lead">Groowy ti aiuta a organizzare spese, documenti, budget e obiettivi. I dati partono dal tuo dispositivo: decidi tu quando usare funzioni cloud, AI o condivisione.</p>
+      <div class="hero-actions">
+        <a class="button" href="#disponibilita">Scopri la disponibilità</a>
+        <a class="text-link" href="#funzioni">Come funziona <span aria-hidden="true">↓</span></a>
+      </div>
+      <p class="microcopy">Strumento di organizzazione personale. Non è consulenza finanziaria o fiscale.</p>
+    </div>
+    <div class="product-visual" aria-label="Rappresentazione astratta delle funzionalità di Groowy">
+      <div class="phone-frame">
+        <div class="phone-top"></div>
+        <div class="visual-label">Questo mese</div>
+        <div class="visual-balance"></div>
+        <div class="visual-chart" aria-hidden="true"><span></span><span></span><span></span><span></span><span></span></div>
+        <div class="visual-row"><i></i><b></b><em></em></div>
+        <div class="visual-row"><i></i><b></b><em></em></div>
+        <div class="visual-row"><i></i><b></b><em></em></div>
+      </div>
+      <div class="receipt-card"><span class="receipt-dot"></span><strong>Documento acquisito</strong><small>Da controllare e salvare</small></div>
+      <div class="space-card"><span>Spazio attivo</span><strong>Personale</strong></div>
+    </div>
+  </section>
+
+  <section class="trust-strip" aria-label="Principi di Groowy">
+    <p><strong>Organizza anche offline</strong><span>La base personale resta utile sul dispositivo.</span></p>
+    <p><strong>Attiva solo ciò che serve</strong><span>Cloud, AI e condivisione seguono una scelta esplicita.</span></p>
+    <p><strong>Leggi prima di decidere</strong><span>Movimenti, budget e obiettivi in un quadro unico.</span></p>
+  </section>
+
+  <section id="funzioni" class="section" aria-labelledby="funzioni-title">
+    <div class="section-intro">
+      <p class="eyebrow">Tutto ciò che serve, senza rumore</p>
+      <h2 id="funzioni-title">Un posto per capire, non solo registrare.</h2>
+      <p>Groowy non decide al posto tuo. Riunisce le informazioni che già gestisci ogni giorno e le rende leggibili, verificabili e tue.</p>
+    </div>
+    <div class="feature-grid">
+      <article class="feature-card"><span class="feature-number">01</span><h3>Spese e categorie</h3><p>Registra entrate e uscite, usa categorie, tag e movimenti ricorrenti per ritrovare rapidamente ciò che conta.</p></article>
+      <article class="feature-card"><span class="feature-number">02</span><h3>Budget e obiettivi</h3><p>Segui budget, risparmi e conti con una visione coerente del tuo Spazio attivo.</p></article>
+      <article class="feature-card"><span class="feature-number">03</span><h3>Documenti e riferimenti</h3><p>Acquisisci documenti e tieni in ordine i riferimenti che ti servono. Le funzioni AI sono assistive, volontarie e i risultati restano da verificare.</p></article>
+      <article class="feature-card"><span class="feature-number">04</span><h3>Spazi e gruppi</h3><p>Tieni separati Personale, Famiglia o Lavoro; quando scegli di condividere, sai con chi e in quale Spazio.</p></article>
+    </div>
+    <p class="section-link"><a class="text-link" href="/guide/">Leggi le guide pratiche su spese, documenti, budget e privacy <span aria-hidden="true">→</span></a></p>
+  </section>
+
+  <section id="controllo" class="section split-section" aria-labelledby="controllo-title">
+    <div>
+      <p class="eyebrow">Un percorso leggibile</p>
+      <h2 id="controllo-title">Prima organizzi. Poi scegli cosa collegare.</h2>
+      <p>La base dell'app resta utile anche senza account cloud: registri, cerchi e leggi i tuoi dati sul dispositivo. Se attivi una funzione esterna, Groowy ti mostra lo scopo e il perimetro prima di procedere.</p>
+      <a class="text-link" href="/security/">Leggi come trattiamo i dati <span aria-hidden="true">→</span></a>
+    </div>
+    <div class="principle-list">
+      <div><span>01</span><p><strong>Parti dal dispositivo</strong>Il registro personale non richiede un collegamento bancario per funzionare.</p></div>
+      <div><span>02</span><p><strong>Attiva per caso d'uso</strong>Cloud, backup, AI o Spazi condivisi entrano solo quando servono.</p></div>
+      <div><span>03</span><p><strong>Controlla il risultato</strong>Le scansioni e le future letture automatiche restano assistive: confermi tu.</p></div>
+    </div>
+  </section>
+
+  <section id="disponibilita" class="section availability" aria-labelledby="disponibilita-title">
+    <div class="section-intro">
+      <p class="eyebrow">Disponibilità</p>
+      <h2 id="disponibilita-title">Groowy sta arrivando sugli store.</h2>
+      <p>Stiamo completando la release candidate. Quando le versioni saranno pubbliche, qui troverai i link diretti e verificati agli store.</p>
+    </div>
+    <div class="store-grid">
+      <article class="store-card"><span class="store-kicker">Android</span><h3>Google Play</h3><p>In preparazione per la pubblicazione.</p><span class="status-badge">Prossimamente</span></article>
+      <article class="store-card"><span class="store-kicker">iPhone e iPad</span><h3>App Store</h3><p>In preparazione per la pubblicazione.</p><span class="status-badge">Prossimamente</span></article>
+    </div>
+    <div class="availability-note"><p><strong>Vuoi seguire il progetto o provare una beta quando sarà disponibile?</strong> Scrivi a <a href="mailto:hello@groowy.app?subject=Groowy%20beta">hello@groowy.app</a>.</p></div>
+  </section>
+
+  <section class="partner-banner" aria-labelledby="partner-title">
+    <div><p class="eyebrow">Per potenziali partner</p><h2 id="partner-title">Stiamo costruendo un prodotto serio per dati finanziari sensibili.</h2></div>
+    <div><p>Groowy cerca interlocutori per esplorare, in futuro, API di lettura bancaria in sola lettura con consenso e perimetro dati verificabile.</p><a class="button secondary" href="/partners/open-banking/">Scopri il contesto partner</a></div>
+  </section>
+</PublicLayout>

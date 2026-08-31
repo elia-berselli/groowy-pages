@@ -1,0 +1,29 @@
+---
+import PublicLayout from '../../layouts/PublicLayout.astro';
+
+const alternatePaths = { it: '/partners/open-banking/', en: '/en/partners/open-banking/' };
+---
+
+<PublicLayout
+  lang="it"
+  title="Open banking AIS in sola lettura"
+  description="La roadmap Groowy per future partnership AIS read-only: consenso, provider regolamentato e nessuna partnership dichiarata in anticipo."
+  canonicalPath="/partners/open-banking/"
+  {alternatePaths}
+>
+  <article class="prose">
+    <p class="eyebrow">Partner · roadmap</p>
+    <h1>Un ponte verso i conti, senza diventare la banca.</h1>
+    <p>Groowy sta valutando un accesso AIS in sola lettura per ridurre l'inserimento manuale e migliorare la lettura delle finanze. L'eventuale integrazione richiederà consenso esplicito, un provider regolamentato e un perimetro dati documentato.</p>
+    <div class="notice">Nessun provider è stato selezionato. Questa pagina non è una partnership, non offre accesso bancario e non dichiara una funzione disponibile.</div>
+    <div class="card"><h2>Stato della roadmap</h2><p>Stiamo raccogliendo requisiti e interlocutori; non esiste ancora un'integrazione attiva. Le evidenze tecniche pubbliche restano raccolte nella pagina <a href="/security/">Sicurezza e dati</a>.</p></div>
+    <h2>Cosa verificheremo insieme</h2>
+    <ul>
+      <li>copertura istituti, qualità del dato e comportamento in caso di disconnessione;</li>
+      <li>consenso leggibile, revoca, rinnovo e ri-autenticazione;</li>
+      <li>minimizzazione, retention, cancellazione e separazione dei dati;</li>
+      <li>sandbox, limiti, documentazione e condizioni adatte a un pilot circoscritto.</li>
+    </ul>
+    <div class="partner-contact"><p class="eyebrow">Primo contatto</p><h2>Vediamo se c'è un buon punto di incontro.</h2><p>Per presentare un servizio, un'API o una possibile collaborazione, scrivi a <a href="mailto:hello@groowy.app?subject=Partnership%20Groowy">hello@groowy.app</a>. Puoi includere mercati coperti, documentazione sviluppatori, modello di consenso, sandbox e modalità di pilot.</p><p class="microcopy">Questa pagina descrive una direzione di prodotto: Groowy non dichiara integrazioni bancarie attive né autorizzazioni regolamentari proprie.</p></div>
+  </article>
+</PublicLayout>

@@ -1,0 +1,101 @@
+---
+import '../styles/site.css';
+
+interface Props {
+  lang: 'it' | 'en';
+  title: string;
+  description: string;
+  canonicalPath: string;
+  alternatePaths?: { it: string; en: string };
+}
+
+const { lang, title, description, canonicalPath, alternatePaths } = Astro.props;
+const siteUrl = 'https://groowy.app';
+const socialTitle = `${title} · Groowy`;
+const socialLocale = lang === 'it' ? 'it_IT' : 'en_US';
+const socialImage = `${siteUrl}/og.png`;
+const canonical = `${siteUrl}${canonicalPath}`;
+const navigation = lang === 'it'
+  ? [
+      ['Sicurezza', '/security/'],
+      ['Open banking', '/partners/open-banking/'],
+      ['Chi è Groowy', '/about/'],
+      ['Supporto', '/support/'],
+    ]
+  : [
+      ['Security', '/en/security/'],
+      ['Open banking', '/en/partners/open-banking/'],
+      ['About Groowy', '/en/about/'],
+      ['Support', '/en/support/'],
+    ];
+const homePath = lang === 'it' ? '/' : '/en/';
+const otherLanguage = alternatePaths
+  ? (lang === 'it' ? { label: 'English', path: alternatePaths.en } : { label: 'Italiano', path: alternatePaths.it })
+  : null;
+const footerLinks = lang === 'it'
+  ? [
+      ['Privacy', '/privacy/'],
+      ['Termini', '/terms/'],
+      ['Cancella account', '/delete-account/'],
+      ['Partner', '/partners/open-banking/'],
+      ['Supporto', '/support/'],
+    ]
+  : [
+      ['Privacy', '/privacy/'],
+      ['Terms', '/terms/'],
+      ['Delete account', '/delete-account/'],
+      ['Partners', '/en/partners/open-banking/'],
+      ['Support', '/en/support/'],
+    ];
+---
+
+<!doctype html>
+<html lang={lang}>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="description" content={description} />
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="Groowy" />
+    <meta property="og:title" content={socialTitle} />
+    <meta property="og:description" content={description} />
+    <meta property="og:url" content={canonical} />
+    <meta property="og:locale" content={socialLocale} />
+    <meta property="og:image" content={socialImage} />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content={socialTitle} />
+    <meta name="twitter:description" content={description} />
+    <meta name="twitter:image" content={socialImage} />
+    <meta name="robots" content="index,follow" />
+    <link rel="canonical" href={canonical} />
+    {alternatePaths && <link rel="alternate" hreflang="it" href={`${siteUrl}${alternatePaths.it}`} />}
+    {alternatePaths && <link rel="alternate" hreflang="en" href={`${siteUrl}${alternatePaths.en}`} />}
+    {alternatePaths && <link rel="alternate" hreflang="x-default" href={`${siteUrl}${alternatePaths.it}`} />}
+    <title>{title} · Groowy</title>
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="brand" href={homePath} aria-label="Groowy home"><span class="brand-mark" aria-hidden="true"></span>Groowy</a>
+      <nav class="desktop-navigation" aria-label={lang === 'it' ? 'Navigazione principale' : 'Main navigation'}>
+        {navigation.map(([label, path]) => <a href={path}>{label}</a>)}
+        {otherLanguage && <a class="language-link" href={otherLanguage.path}>{otherLanguage.label}</a>}
+      </nav>
+      <details class="mobile-menu">
+        <summary>{lang === 'it' ? 'Menu' : 'Menu'}</summary>
+        <nav aria-label={lang === 'it' ? 'Navigazione principale' : 'Main navigation'}>
+          {navigation.map(([label, path]) => <a href={path}>{label}</a>)}
+          {otherLanguage && <a class="language-link" href={otherLanguage.path}>{otherLanguage.label}</a>}
+        </nav>
+      </details>
+    </header>
+    <main>
+      <slot />
+    </main>
+    <footer class="site-footer">
+      <div><a class="brand" href={homePath}><span class="brand-mark" aria-hidden="true"></span>Groowy</a><p>{lang === 'it' ? 'Finanza personale con più chiarezza.' : 'Personal finance with more clarity.'}</p><p class="footer-meta">Groowy · Elia Berselli</p></div>
+      <div class="footer-links">
+        {footerLinks.map(([label, path]) => <a href={path}>{label}</a>)}
+      </div>
+    </footer>
+  </body>
+</html>

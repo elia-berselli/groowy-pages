@@ -13,6 +13,8 @@
     <header>
       <a class="brand" href="index.html"><span class="brand-mark" aria-hidden="true"></span>Groowy</a>
       <nav aria-label="Navigazione principale">
+        <a href="index.html">Home</a>
+        <a href="partners.html">Partner</a>
         <a href="privacy-policy.html" aria-current="page">Privacy</a>
         <a href="delete-account.html">Cancella account</a>
         <a href="terms-of-service.html">Termini</a>
@@ -43,13 +45,27 @@
           <tr><td>Email, nome profilo e identificatore account</td><td>Quando crei o usi un Account cloud</td><td>Autenticazione, sicurezza, profilo e recupero accesso</td></tr>
           <tr><td>Transazioni e oggetti condivisi</td><td>Solo quando usi Gruppi cloud</td><td>Collaborazione con i membri scelti</td></tr>
           <tr><td>Immagini o testo dei documenti</td><td>Quando avvii una scansione AI dopo il consenso</td><td>Classificazione ed estrazione richiesta dall'utente</td></tr>
-          <tr><td>Testo di notifiche selezionate</td><td>Solo con funzione compatibile e toggle esplicito, disattivo per default</td><td>Creazione assistita di movimenti da notifiche</td></tr>
+          <tr><td>Titolo e testo di notifiche finanziarie candidate</td><td>Solo con funzione compatibile, disclosure accettata, permesso Android e toggle esplicito; tutto è disattivo per default</td><td>Creazione assistita di movimenti da notifiche</td></tr>
           <tr><td>Metriche tecniche AI</td><td>Durante una richiesta AI</td><td>Quote, prevenzione abusi e controllo costi; non includono immagini o testo grezzo</td></tr>
           <tr><td>Crash, stack e identificatore diagnostico pseudonimo</td><td>Quando Crashlytics è disponibile</td><td>Stabilità, diagnosi e sicurezza</td></tr>
           <tr><td>Identificatore acquisto ed entitlement</td><td>Quando usi abbonamenti o ripristino acquisti</td><td>Attivazione del piano e prevenzione frodi</td></tr>
           <tr><td>Backup scelto dall'utente</td><td>Quando colleghi Google Drive e avvii backup/restore</td><td>Recupero dati su richiesta</td></tr>
         </tbody>
       </table>
+
+      <h3>Accesso alle notifiche su Android</h3>
+      <p>
+        Il permesso speciale di Android consente tecnicamente a Groowy di
+        ricevere titolo e contenuto delle notifiche di tutte le app. Prima di
+        aprire le impostazioni di sistema, Groowy mostra una spiegazione
+        dedicata. L'app scarta sul dispositivo ogni notifica che non proviene
+        da un'app bancaria o finanziaria supportata: parole generiche presenti
+        in chat, email o altre app non autorizzano l'invio. Solo i candidati
+        finanziari vengono inviati tramite il proxy Groowy al fornitore AI.
+        Disattivare il toggle ferma il trattamento; per revocare anche l'accesso
+        tecnico del sistema occorre rimuovere Groowy da “Accesso alle
+        notifiche” nelle impostazioni Android.
+      </p>
 
       <h2>3. Basi del trattamento</h2>
       <p>
@@ -93,7 +109,8 @@
       <h2>7. Scelte e diritti</h2>
       <p>
         Puoi usare l'Account locale, revocare il consenso AI, disattivare il
-        parsing notifiche, esportare o cancellare i dati locali e scollegare
+        parsing notifiche, revocare separatamente l'accesso notifiche nelle
+        impostazioni Android, esportare o cancellare i dati locali e scollegare
         Drive. Puoi chiedere accesso, rettifica, portabilità, limitazione,
         opposizione o cancellazione scrivendo a
         <a href="mailto:hello@groowy.app">hello@groowy.app</a>. Potremo chiedere
@@ -124,6 +141,6 @@
         <p>You may request access, correction, export or deletion at <a href="mailto:hello@groowy.app">hello@groowy.app</a>. See the <a href="delete-account.html">account deletion page</a> for details.</p>
       </details>
     </main>
-    <footer><p>Groowy · Elia Berselli · <a href="mailto:hello@groowy.app">hello@groowy.app</a></p></footer>
+    <footer><p>Groowy · Elia Berselli · <a href="terms-of-service.html">Termini</a> · <a href="delete-account.html">Cancella account</a> · <a href="mailto:hello@groowy.app">Supporto</a></p></footer>
   </body>
 </html>

@@ -1,0 +1,51 @@
+---
+import { getCollection } from 'astro:content';
+import PublicLayout from '../layouts/PublicLayout.astro';
+
+const alternatePaths = { it: '/security/', en: '/en/security/' };
+const claims = await getCollection('claims', ({ data }) => data.locales.includes('it') && (data.status === 'live' || data.status === 'beta'));
+---
+
+<PublicLayout
+  lang="it"
+  title="Sicurezza e dati"
+  description="Il perimetro di sicurezza di Groowy: minimizzazione, dati locali e claim pubbliche collegate a evidenze."
+  canonicalPath="/security/"
+  {alternatePaths}
+>
+  <article class="prose">
+    <p class="eyebrow">Sicurezza</p>
+    <h1>Il dato utile è il dato necessario.</h1>
+    <p>Qui distinguiamo ciò che è già verificato da ciò che resta in preparazione: dove nasce il dato, quali funzioni possono spostarlo e quali residui non devono entrare nel perimetro del prodotto.</p>
+    <div class="notice">Questa pagina non è una certificazione PCI, una garanzia legale o una promessa di sicurezza assoluta. È un registro di comportamento tecnico verificato alla data indicata.</div>
+    <section class="card data-card" aria-labelledby="data-orientation-title">
+      <h2 id="data-orientation-title">Orientamento rapido sui dati</h2>
+      <dl class="data-facts">
+        <div><dt>Cosa</dt><dd>Transazioni, documenti e riferimenti che scegli di gestire; le funzioni esterne aggiungono solo il dato necessario al caso d'uso.</dd></div>
+        <div><dt>Dove</dt><dd>La base personale parte dal dispositivo. Cloud, AI, Gruppi e Drive entrano solo quando attivi la relativa funzione.</dd></div>
+        <div><dt>Per quanto</dt><dd>La durata dipende dalla funzione e dal fornitore; la policy completa descrive conservazione, backup e cancellazione.</dd></div>
+        <div><dt>Controllo</dt><dd>Puoi scegliere, revocare o disattivare le funzioni disponibili e usare i flussi di export o cancellazione previsti.</dd></div>
+      </dl>
+      <p class="microcopy"><a href="/privacy/">Leggi l'informativa completa</a>: questa scheda è un orientamento, non sostituisce il testo legale.</p>
+    </section>
+    <div class="claim-list">
+      {claims.map((claim) => (
+        <article class="card">
+          <div class="claim-meta"><span class="badge">{claim.data.status}</span><span>{claim.data.claimId}</span><span>verificata {claim.data.verifiedAt}</span></div>
+          <h2>{claim.data.title}</h2>
+          <p>{claim.data.description}</p>
+          <ul class="evidence">
+            {claim.data.evidenceRefs.map((reference) => <li>{reference}</li>)}
+          </ul>
+        </article>
+      ))}
+    </div>
+    <h2>Carte di pagamento: perimetro minimo</h2>
+    <p>Per la release candidate la direzione è trattare una carta payment come un riferimento visivo minimo, non come un portafoglio di credenziali.</p>
+    <ul>
+      <li>conservare solo circuito/emittente e, se davvero utile, le ultime quattro cifre;</li>
+      <li>non conservare PAN completo, CVC/CVV, PIN, dati di banda o chip;</li>
+      <li>non persistere foto fronte-retro né OCR grezzo; per il payment l'OCR cloud resta escluso finché il percorso non è verificato end-to-end.</li>
+    </ul>
+  </article>
+</PublicLayout>

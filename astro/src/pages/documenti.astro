@@ -1,0 +1,10 @@
+---
+import { getEntry } from 'astro:content';
+import GuideArticle from '../components/GuideArticle.astro';
+
+const guide = await getEntry('guides', 'it/documenti');
+if (!guide) throw new Error('Guida italiana documenti non trovata');
+const alternatePaths = { it: guide.data.canonicalPath, en: guide.data.alternatePath };
+---
+
+<GuideArticle {guide} {alternatePaths} />

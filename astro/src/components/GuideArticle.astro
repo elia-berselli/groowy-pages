@@ -1,0 +1,41 @@
+---
+import { render, type CollectionEntry } from 'astro:content';
+import PublicLayout from '../layouts/PublicLayout.astro';
+
+interface Props {
+  guide: CollectionEntry<'guides'>;
+  alternatePaths: { it: string; en: string };
+}
+
+const { guide, alternatePaths } = Astro.props;
+const { Content } = await render(guide);
+const isItalian = guide.data.locale === 'it';
+const statusLabel = isItalian
+  ? guide.data.productStatus === 'beta' ? 'Release candidate in preparazione' : guide.data.productStatus
+  : guide.data.productStatus === 'beta' ? 'Release candidate in preparation' : guide.data.productStatus;
+const updatedLabel = new Intl.DateTimeFormat(isItalian ? 'it-IT' : 'en-GB', {
+  day: 'numeric', month: 'long', year: 'numeric',
+}).format(new Date(`${guide.data.updatedAt}T12:00:00Z`));
+---
+
+<PublicLayout
+  lang={guide.data.locale}
+  title={guide.data.title}
+  description={guide.data.description}
+  canonicalPath={guide.data.canonicalPath}
+  {alternatePaths}
+>
+  <article class="prose guide-article">
+    <p class="eyebrow">{guide.data.eyebrow}</p>
+    <h1>{guide.data.h1}</h1>
+    <p class="guide-intent"><strong>{isItalian ? 'Domanda a cui risponde' : 'The question it answers'}</strong>{guide.data.searchIntent}</p>
+    <Content />
+    <aside class="guide-status">
+      <p><strong>{isItalian ? 'Perimetro della guida' : 'Guide scope'}</strong></p>
+      <p>{isItalian
+        ? `Questa pagina descrive il perimetro della ${statusLabel.toLowerCase()}. Non sostituisce una scelta finanziaria, fiscale o legale personale.`
+        : `This page describes the scope of the ${statusLabel.toLowerCase()}. It does not replace personal financial, tax or legal judgement.`}</p>
+      <p class="guide-meta">{isItalian ? 'Aggiornata' : 'Updated'} {updatedLabel} · {isItalian ? 'Autore' : 'Author'}: {guide.data.author}</p>
+    </aside>
+  </article>
+</PublicLayout>

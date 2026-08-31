@@ -1,0 +1,10 @@
+---
+import { getEntry } from 'astro:content';
+import GuideArticle from '../components/GuideArticle.astro';
+
+const guide = await getEntry('guides', 'it/budget-famiglia');
+if (!guide) throw new Error('Guida italiana budget famiglia non trovata');
+const alternatePaths = { it: guide.data.canonicalPath, en: guide.data.alternatePath };
+---
+
+<GuideArticle {guide} {alternatePaths} />

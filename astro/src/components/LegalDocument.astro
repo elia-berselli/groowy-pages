@@ -1,0 +1,19 @@
+---
+import PublicLayout from '../layouts/PublicLayout.astro';
+import type { LegacyLegalDocument } from '../lib/legacy_legal';
+
+interface Props {
+  document: LegacyLegalDocument;
+}
+
+const { document } = Astro.props;
+---
+
+<PublicLayout
+  lang="it"
+  title={document.title}
+  description={document.description}
+  canonicalPath={document.canonicalPath}
+>
+  <article class="prose legal-document" set:html={document.bodyHtml} />
+</PublicLayout>
