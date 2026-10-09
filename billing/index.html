@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="it">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="referrer" content="no-referrer">
+  <meta name="robots" content="noindex,nofollow">
+  <title>Groowy · Abbonamento</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://cdn.paddle.com/paddle/v2/paddle.js" defer></script>
+  <script type="module" src="page.mjs"></script>
+</head>
+<body>
+  <main>
+    <a class="brand" href="../" aria-label="Groowy, pagina iniziale">groowy<span aria-hidden="true">●</span></a>
+    <p class="eyebrow">Il tuo account, su ogni dispositivo</p>
+    <h1>Più spazio per i tuoi progetti.</h1>
+    <p class="intro">Acquista Grow sul web e ritrovalo nell’app accedendo con lo stesso account Groowy.</p>
+    <section class="card" aria-label="Account e abbonamento">
+      <form id="login">
+        <h2>Accedi a Groowy</h2>
+        <p>Usa l’account che hai già nell’app. Se non ne hai uno, crealo prima da Groowy.</p>
+        <label for="email">Email</label>
+        <input id="email" name="email" type="email" autocomplete="username" required>
+        <label for="password">Password</label>
+        <input id="password" name="password" type="password" autocomplete="current-password" required>
+        <button id="sign-in" type="submit" disabled>Accedi</button>
+      </form>
+      <div id="account" hidden>
+        <div class="row"><h2>Il tuo abbonamento</h2><button id="logout" class="quiet" type="button">Esci</button></div>
+        <p id="plan">Verifica del piano in corso…</p>
+        <div id="offer" hidden>
+          <h3>Grow</h3>
+          <p>Le funzionalità Grow del tuo account, disponibili anche nell’app.</p>
+          <label for="interval">Periodicità</label>
+          <select id="interval"><option value="month">Mensile</option><option value="year">Annuale</option></select>
+          <p class="note">Prezzo, imposte e condizioni del rinnovo saranno mostrati prima del pagamento.</p>
+          <button id="buy" type="button" disabled>Continua al pagamento</button>
+        </div>
+        <button id="portal" class="quiet" type="button" hidden>Gestisci il tuo abbonamento web</button>
+        <button id="refresh" class="quiet" type="button">Aggiorna il piano</button>
+      </div>
+      <p id="status" role="status" aria-live="polite">Preparazione dell’accesso…</p>
+    </section>
+    <p class="footer">I pagamenti web sono gestiti da Paddle. Il piano si attiva dopo la conferma del pagamento e si riconosce nell’app con lo stesso account.</p>
+  </main>
+</body>
+</html>
